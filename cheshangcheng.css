@@ -1,0 +1,179 @@
+@charset "utf-8";
+/* CSS Document */
+/*车商城样式*/
+/*类型筛选样式*/
+table td{
+	border:#CCC thin solid;
+	text-align:center;}
+.sousuo .paixu li{
+	list-style-type:none;
+	float:left;
+	position:relative;
+	top:-5px;
+	left:-20px;
+	margin:0px 10px;}
+.sousuo .paixu li img{
+	vertical-align:middle;}
+.sousuo .paixu li:hover{
+	color:#000;
+	text-decoration:underline;}
+.sousuo td a{
+	text-decoration:none;
+	color:#000;}
+.sousuo td a:hover{
+	background-color:#090;
+	color:#FFF;}
+.sousuo td a:visited{
+	color:#F00;}
+.sousuo .pingpai td:hover{
+	background-color:#090;}
+	
+/*车商品列表样式*/
+.zuixin{
+	/*border:#0F0 thick solid;*/
+	border:#999 thin solid;
+	height:2020px;
+	width:1090px;
+	margin:0px auto;
+	}
+.zuixin div a{
+	text-decoration:none;
+	color:#000;}
+.zuixin div{
+	height:300px;
+	width:300px;
+	float:left;
+	margin:10px 25px;
+	clear:right;
+	}
+.zuixin div{
+	border:#FFF thin solid;}
+.zuixin div:hover{
+	border:#F00 thin solid;}
+.zuixin p{
+	color:#000;
+	font-size:18px;
+	font-weight:bolder;
+	text-align:center;}
+.zuixin .num{
+	color:#6F0;}
+.zuixin .yuanjia{
+	text-decoration:line-through;
+	color:#666;}
+.zuixin .money{
+	color:#F00;
+	font-weight:bolder;}
+.zuixin .b{
+	clear:left;
+	margin-top:20px;
+	margin-left:500px;}
+/*页数样式*/
+.zuixin .yeshu li{
+	list-style-type:none;
+	float:left;
+	padding:10px;}
+.zuixin .yeshu{
+	margin:0px 180px;}
+.zuixin .yeshu li input{
+	background-color:#090;
+	color:#FFF;}
+.zuixin .yeshu li input:hover{
+	background-color:#030;}
+/*logo样式*/
+/*.logo{
+	position:relative;
+	top:-65px;
+	height:180px;
+	width:250px;}*/
+/*.top{
+	border:#F00 thick solid;
+	height:120px;
+	background-image:url(img/name.png);
+	}
+*/
+/*猜您喜欢的样式*/
+.cai{
+	/*border:#000 thick solid;*/
+	border:#999 thin solid;
+	margin:0px auto;
+	height:380px;
+	width:1090px;}
+
+.cai div a{
+	text-decoration:none;
+	color:#000;}
+.cai h3{
+	text-indent:2em;
+	color:#F00;}
+.cai div{
+	height:300px;
+	width:300px;
+	float:left;
+	margin:10px 25px;
+	clear:right;
+	}
+.cai div{
+	border:#FFF thin solid;}
+.cai div:hover{
+	border:#F00 thin solid;}
+.cai p{
+	color:#000;
+	font-size:18px;
+	font-weight:bolder;
+	text-align:center;}
+.cai .num{
+	color:#6F0;}
+.cai .yuanjia{
+	text-decoration:line-through;
+	color:#666;}
+.cai .money{
+	color:#F00;
+	font-weight:bolder;}
+.cai .b{
+	clear:left;
+	margin-top:20px;
+	margin-left:500px;}
+/*版权样式*/
+.bottom{
+	/*border:#F00 thick solid;*/
+	height:60px;
+	text-align:center;
+	padding:15px 0px;
+	clear:left;
+	}
+.bottom a{
+	color:#666;
+	text-decoration:none;
+	}
+.bottom .copy{
+	color:#666;
+	}
+.bottom a:hover{
+	color:#000;
+	text-decoration:underline;}
+	
+	.top .xiao a{
+text-decoration:none;
+color:#666666;
+}
+.top .xiao img{
+vertical-align:middle;
+}
+. top .xiao a:hover{
+color:#FF0000;
+}
+.top .xiao{
+float:right;
+position:absolute;
+right:100px;
+top:170px;
+}
+/*.logo1{
+	border:#000 thick solid;
+	height:270px;
+	width:1100px;
+	margin:0px auto;
+	background-image:url(img/logo2.png);
+	background-position:250px 0px;
+	background-repeat:no-repeat;}
+*/

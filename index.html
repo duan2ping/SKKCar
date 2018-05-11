@@ -1,0 +1,490 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>山卡卡国际汽车网站联盟</title>
+
+<!--主页CSS样式-->
+<link rel="stylesheet" href="wangzhanyangshi.css" type="text/css"/>
+<!--轮换的js代码-->
+<script type="text/javascript" src="jquery-1.2.6.pack.js"></script>
+<script type="text/javascript" language="javascript">
+	var t = n = 0, count;
+	$(document).ready(function(){	
+		count=$("#banner_list a").length;
+		$("#banner_list a:not(:first-child)").hide();
+		$("#banner_info").html($("#banner_list a:first-child").find("img").attr('alt'));
+		$("#banner_info").click(function(){window.open($("#banner_list a:first-child").attr('href'), "_blank")});
+		$("#banner li").click(function() {
+			var i = $(this).text() - 1;//获取Li元素内的值，即1，2，3，4
+			n = i;
+			if (i >= count) return;
+			$("#banner_info").html($("#banner_list a").eq(i).find("img").attr('alt'));
+			$("#banner_info").unbind().click(function(){window.open($("#banner_list a").eq(i).attr('href'), "_blank")})
+			$("#banner_list a").filter(":visible").fadeOut(500).parent().children().eq(i).fadeIn(1000);
+			document.getElementById("banner").style.background="";
+			$(this).toggleClass("on");
+			$(this).siblings().removeAttr("class");
+		});
+		t = setInterval("showAuto()", 4000);
+		$("#banner").hover(function(){clearInterval(t)}, function(){t = setInterval("showAuto()", 4000);});
+	})
+	
+	function showAuto()
+	{
+		n = n >=(count - 1) ? 0 : ++n;
+		$("#banner li").eq(n).trigger('click');
+	}
+    // 更换背景色
+   /* function changeColor(){
+            var color =$(".changeBackgroundColor :selected").text();
+            if(color=="黑色"){
+             //   window.localStorage['color'] = 'black';
+                $('.backgroundColor').css('backgroundColor','black');
+            }else if(color=="红色"){
+                $('.backgroundColor').css('backgroundColor','red');
+            } else if(color=="白色"){
+                $('.backgroundColor').css('backgroundColor','white');
+            }
+
+//            else if(color=="红色"){
+//                $('.backgroundColor').css('backgroundColor','red');
+//            }
+//            如果添加颜色 复制注释代码修改相应代码“红色”  “red” 每个页面添加 车商城 js代码
+
+    }
+	
+*/	
+function aaa(){
+if(document.form.ww.value=="")
+ {
+alert("购买成功");
+}
+}
+
+function aaa(){
+if(document.er.ww.value=="")
+ {
+alert("购买成功");
+}
+}
+
+function aaa(){
+if(document.san.ww.value=="")
+ {
+alert("购买成功");
+}
+}
+
+function aaa(){
+if(document.si.ww.value=="")
+ {
+alert("购买成功");
+}
+}
+
+function aaa(){
+if(document.wu.ww.value=="")
+ {
+alert("购买成功");
+}
+}
+
+function aaa(){
+if(document.liu.ww.value=="")
+ {
+alert("购买成功");
+}
+}
+</script>
+
+
+
+</head>
+<!--每个页面添加class="backgroundColor"-->
+<body class="backgroundColor">
+<!--添加背景音乐-->
+<audio src="One Direction - Rock Me.mp3" autoplay></audio>
+
+<!--logo上部框架-->
+    	<div class="top">
+        
+        
+       <!-- <div class="zhuti">
+        	 <select class="changeBackgroundColor" onchange="changeColor()">
+                 <option>请选择</option>
+                 <option>黑色</option>
+                 <option>红色</option>
+                 <option>白色</option>
+             </select>
+        </div>
+        -->
+            <ul>
+            	<li><a href="skk_login.html">登录</a></li>
+                <li>&nbsp;</li>
+                <li><a href="skk_register.html">注册</a></li>
+            </ul>
+        <div class="logo"><img src="img/logo.png" /></div>
+        </div>
+	<!--网站主框架-->
+	<div class="index">
+    	
+        <!--导航-->
+        <div class="daohang">
+        	<ul>
+            	<li><a href="#">首页</a></li>
+                <li><a href="#cheshi">车视频</a></li>
+                <li><a href="cheshangcheng.html">车商城</a></li>
+                <li><a href="#zuixin">最新上市</a></li>
+                <li><a href="#">车饰品</a></li>
+                <li><a href="#">汽车评估</a></li>
+                <li><a href="#">热销榜</a></li>
+                <li><a href="#">论坛</a></li>
+                <li><a href="#">车新闻</a></li>
+                <li>
+               	 <form method="post" action="车商城.html">
+             		<input type="text"  value="输入车型或品牌" />
+                    <input type="submit" value="搜索" />
+        		 </form>
+                </li>
+                
+                
+                
+              <!--  <li>
+                    <select class="changeBackgroundColor" onchange="changeColor()">
+                        <option>请选择</option>
+                        <option>黑色</option>
+                        <option>红色</option>
+                    </select>
+                </li>
+                
+                <li>
+                	<div class="name">
+                    	<form method="post" action="车商城.html">
+                        <select>
+                            <option selected="selected"><a href="#">请选择品牌</a></option>
+                            <option><a href="#">A <span>奥迪</span></a></option>
+                            <option><a href="#">B <span>宝马</span></a></option>
+                            <option><a href="#">B <span>奔驰</span></a></option>
+                            <option><a href="#">B <span>别克</span></a></option>
+                            <option><a href="#">C <span>长城</span></a></option>
+                            <option><a href="#">C <span>长安</span></a></option>
+                            <option><a href="#">D <span>大众</span></a></option>
+                            <option><a href="#">F <span>丰田</span></a></option>
+                            <option><a href="#">F <span>法拉利</span></a></option>
+                            <option><a href="#">H <span>红旗</span></a></option>
+                            <option><a href="#">J <span>吉普</span></a></option>
+                            <option><a href="#">L <span>路虎</span></a></option>
+                            <option><a href="#">M <span>马自达</span></a></option>
+                            <option><a href="#">M <span>玛莎拉蒂</span></a></option>
+                            <option><a href="#">Q <span>起亚</span></a></option>
+                         </select>
+                         
+                         <select>
+                            <option selected="selected"><a href="#">请选择车系</a></option>
+                            <option><a href="#"><span>A3</span></a></option>
+                            <option><a href="#"><span>宝马</span></a></option>
+                            <option><a href="#"><span>1系</span></a></option>
+                            <option><a href="#"><span>2系</span></a></option>
+                            <option><a href="#"><span>3系</span></a></option>
+                            <option><a href="#"><span>w系</span></a></option>
+                            <option><a href="#"><span>A系</span></a></option>
+                            <option><a href="#"><span>F系</span></a></option>
+                            <option><a href="#"><span>W系</span></a></option>
+                            <option><a href="#"><span>K系</span></a></option>
+                            <option><a href="#"><span>S系</span></a></option>
+                         </select>
+                         <input type="submit" value="确定" />
+                         </form>
+    				</div>
+                </li>
+                -->
+            </ul>
+        </div>
+        <!--主页主框架-->
+        <div class="homepage">
+        	<!--主页导航左框架-->
+        	<div class="left">
+            <table border="1" width="300" cellspacing="0">
+            	<tr>
+                	<td colspan="3"><strong>品牌推荐</strong></td>
+                </tr>
+                <tr>
+                	<td><a href="hongqi.html" target="display"><img src="img/pl106_40.jpg" /><br />红旗</td>
+                    <td><a href="baoma.html" target="display"><img src="img/pl2_40.jpg" /><br />宝马</td>
+                    <td><a href="benchi.html" target="display"><img src="img/pl3_40.jpg" /><br />奔驰</td>
+                </tr>
+                <tr>
+                	<td><a href="dazhong.html" target="display"><img src="img/pl4_40.jpg"/><br />大众</td>
+                    <td><a href="biaozhi.html" target="display"><img src="img/pl5_40.jpg" /><br />标致</td>
+                    <td><a href="fengtian.html" target="display"><img src="img/pl18_40.jpg" /><br />丰田</td>
+                </tr>
+                <tr>
+                	<td><a href="xiandai.html" target="display"><img src="img/pl23_40.jpg" /><br />现代</td>
+                    <td><a href="biyadi.html" target="display"><img src="img/pl27_40.jpg" /><br />比亚迪</td>
+                    <td><a href="baoshijie.html" target="display"><img src="img/pl52_40.jpg" /><br />保时捷</td>
+                </tr>
+                <tr>
+                	<td><a href="qiya.html" target="display"><img src="img/pl22_40.jpg" /><br />起亚</td>
+                	<td><a href="#" target="display"><img src="img/pl17_40.jpg" /><br />本田</td>
+                    <td><a href="#" target="display"><img src="img/pl8_40.jpg" /><br />雪铁龙</td>
+                </tr>
+                <tr>
+                    <td><a href="#" target="display"><img src="img/pl13_40.jpg"/><br />别克</td>
+                    <td><a href="#" target="display"><img src="img/pl14_40.jpg" /><br />马自达</td>
+                    <td><a href="#" target="display"><img src="img/pl16_40.jpg" /><br />雪佛兰</td>
+                </tr>
+                <tr>
+                	<td><a href="#" target="display"><img src="img/pl53_40.jpg"/><br />&nbsp;&nbsp;&nbsp;&nbsp;迈巴赫&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td><a href="#" target="display"><img src="img/pl56_40.jpg" /><br />阿斯顿马丁</td>
+                    <td><a href="#" target="display"><img src="img/pl57_40.jpg" /><br />宾利</td>
+                </tr>
+                <tr>
+                	<td><a href="#" target="display"><img src="img/pl59_40.jpg" /><br />法拉利</td>
+                    <td><a href="#" target="display"><img src="img/pl60_40.jpg" /><br />捷豹</td>
+                    <td><a href="#" target="display"><img src="img/pl61_40.jpg" /><br />兰博基尼</td>
+                </tr>
+                <tr>
+                	<td><a href="#" target="display"><img src="img/pl65_40.jpg" /><br />路虎</td>
+                    <td><a href="#" target="display"><img src="img/pl66_40.jpg" /><br />玛莎拉蒂</td>
+                    <td><a href="#" target="display"><img src="img/pl71_40.jpg" /><br />雷克萨斯</td>
+                </tr>
+                <tr>
+                	<td><a href="#" target="display"><img src="img/pl72_40.jpg" /><br />讴歌</td>
+                    <td><a href="#" target="display"><img src="img/pl74_40.jpg" /><br />英菲尼迪</td>
+                    <td><a href="#" target="display"><img src="img/pl77_40.jpg" /><br />吉普</td>
+                </tr>
+                <tr>
+                	<td><a href="#" target="display"><img src="img/pl82_40.jpg" /><br />五菱</td>
+                    <td><a href="#" target="display"><img src="img/pl1_40.jpg" /><br />奥迪</td>
+                    <td><a href="#" target="display"><img src="img/pl19_40.jpg" /><br />铃木</td>
+                </tr>
+                <tr>
+                	<td><a href="#" target="display"><img src="img/pl20_40.jpg" /><br />日产</td>
+                    <td><a href="#" target="display"><img src="img/pl21_40.jpg" /><br />三菱</td>
+                    <td><a href="#" target="display"><img src="img/pl124_40.jpg" /><br />DS</td>
+                </tr>
+            </table>
+            </div>
+            <!--主页显示右上框架-->
+        	<div class="info">
+            	<iframe src="daiyan.html" name='display'  width="770" height="500" scrolling="yes"></iframe>
+            </div>
+           <!--主页新闻动态右下框架-->
+            <div class="news">
+                <h3 style="margin:0px; color:#000">大家都在找</h3>
+                <hr  style="margin:0px; margin-bottom:4px"/>
+                <input type="button" value="SUV"/>
+                <input type="button" value="新手上路"/>
+                <input type="button" value="奥迪A4"/>
+                <input type="button" value="路虎"/>
+                <input type="button" value="经济省油"/>
+                <input type="button" value="准新车"/>
+                <input type="button" value="MPV"/>
+                <input type="button" value="科普兹"/>
+                <input type="button" value="大众神车"/>
+                <input type="button" value="五万以下"/>
+                <input type="button" value="红旗"/>
+                <input type="button" value="最新上市"/>
+                <input type="button" value="2015广州车展"/>
+                <input type="button" value="宝马"/>
+                <input type="button" value="现代"/>
+                <input type="button" value="热销排行"/>
+                <input type="button" value="紧凑车型"/>
+                <input type="button" value="索八"/>
+                <input type="button" value="跑车型"/>
+                <input type="button" value="商用型"/>
+            </div>
+        </div>
+         <!--轮换代码-->
+        <div class="img">
+              <div id="banner">	
+                <div id="banner_bg"></div>  <!--标题背景-->
+                <div id="banner_info"></div> <!--标题-->
+                <ul>
+                    <li class="on">1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+               <div id="banner_list">
+                    <a href="#" target="_blank"><img src="img/01.png" title="山卡卡国际汽车网站热卖" alt="ShanKK.com" /></a>
+                    <a href="#" target="_blank"><img src="img/02.png" title="山卡卡国际汽车网站热卖" alt="ShanKK.com" /></a>
+                    <a href="#" target="_blank"><img src="img/03.png" title="山卡卡国际汽车网站热卖" alt="ShanKK.com" /></a>
+                    <a href="#" target="_blank"><img src="img/04.png" title="山卡卡国际汽车网站热卖" alt="ShanKK.com" /></a>
+                </div>
+            </div>
+            <!--广告-->
+            <div class="guanggao">
+                <div class="shangshi" style="display:block">即将上市</div>
+                <span style="color:#000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;上山卡卡国际汽车网站<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;买最新买放心!</span>
+                <hr />
+                <table border="1" width="288" height="240">
+                    <tr>
+                        <td><strong>品牌/车型</strong></td>
+                        <td><strong>售价/万元</strong></td>
+                    </tr>
+                    <tr>
+                        <td id="p"><a href="#">帅客</a><br />
+                        <div><img src="img/0.0.png" /></div></td>
+                        <td><a href="#">6.88万元起</a></td>
+                    </tr>
+                    <tr>
+                        <td id="p"><a href="#">宝马3系（进口）</a><br />
+                        <div><img src="img/0.1.png" /></div></td>
+                        <td><a href="#">38.30万元起</a></td>
+                    </tr>
+                    <tr>
+                        <td id="p"><a href="#">领航版</a><br />
+                        <div><img src="img/0.2.png" /></div></td>
+                        <td>未公布</td>
+                    </tr>
+                    <tr>
+                        <td id="p"><a href="#">朗境</a><br />
+                        <div><img src="img/0.3.png" /></div></td>
+                        <td><a href="#">15.79万元起</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+         <!--最新上市-->
+         <div class="zuixin">
+            <h3><a name="zuixin">最新上市</a></h3>
+            <hr />
+            <div>
+                <a href="#">
+                    <img src="img/1.png" title="东风本田思铂睿 2015 2.0L 豪华版" />
+                    <p align="center">东风本田思铂睿 2015 2.0L 豪华版</p>
+                    购买人数：<span class="num">250</span><br />
+                    <span class="yuanjia">￥14.480万</span><br />
+                    <span class="money">￥14.28万</span>
+                    
+                    
+                    <form name=form action="#zuixin" method="post">
+                    <input name=ww type=hidden >
+                    <input type="image" value="提交" src="img/a.png" onclick="return aaa()">
+                    </form>
+                    
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="img/2.png" title="福特（进口）福特F-150 美版"/>
+                    <p align="center">福特（进口）福特F-150 美版</p>
+                    购买人数：<span class="num">720</span><br />
+                    <span class="yuanjia">￥76.40万</span><br />
+                    <span class="money">￥76.40万</span>
+                    
+                    
+                    <!--弹窗代码-->
+                    <form name=er action="#zuixin" method="post">
+                    <input name=ww type=hidden >
+                    <input type="image" value="提交" src="img/a.png" onclick="return aaa()">
+                    </form>
+                    
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="img/3.png" title="法拉利 458 4.5升 605马力" />
+                    <p align="center">法拉利 458 4.5升 605马力</p>
+                    购买人数：<span class="num">1</span><br />
+                    <span class="yuanjia">￥448.00万</span><br />
+                    <span class="money">￥448.00万</span>
+                    
+                    
+                    <!--弹窗代码-->
+                    <form name=san action="#zuixin" method="post">
+                    <input name=ww type=hidden >
+                    <input type="image" value="提交" src="img/a.png" onclick="return aaa()">
+                    </form>
+                    
+                    
+                    
+                </a>
+            </div>
+             <div>
+                <a href="#">
+                    <img src="img/4.png" title="福特(进口)-野马 2016版5.0 GT 改装版" />
+                    <p align="center">福特（进口）-野马 5.0 GT 改装版</p>
+                    购买人数：<span class="num">2</span><br />
+                    <span class="yuanjia">￥140.90万</span><br />
+                    <span class="money">￥130.990万</span>
+                    
+                    <!--弹窗代码-->
+                    <form name=si action="#zuixin" method="post">
+                    <input name=ww type=hidden >
+                    <input type="image" value="提交" src="img/a.png" onclick="return aaa()">
+                    </form>
+                    
+                    
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="img/5.png" title="捷豹-捷豹XJ 3.0SC四驱旗舰商务版" />
+                    <p align="center">捷豹-捷豹XJ 3.0SC四驱旗舰商务版</p>
+                    购买人数：<span class="num">1110</span><br />
+                    <span class="yuanjia">￥142.80万</span><br />
+                    <span class="money">￥111.80万</span>
+                    
+                    <!--弹窗代码-->
+                    <form name=wu action="#zuixin" method="post">
+                    <input name=ww type=hidden >
+                    <input type="image" value="提交" src="img/a.png" onclick="return aaa()">
+                    </form>
+                    
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="img/6.png" title="一汽红旗-红旗H7 3.0L 尊贵型" />
+                    <p align="center">一汽红旗-红旗H7 3.0L 尊贵型</p>
+                    购买人数：<span class="num">100000</span><br />
+                    <span class="yuanjia">￥47.98万</span><br />
+                    <span class="money">￥40.48万</span>
+                    
+                    <!--弹窗代码-->
+                    <form name=liu action="#zuixin" method="post">
+                    <input name=ww type=hidden >
+                    <input type="image" value="提交" src="img/a.png" onclick="return aaa()">
+                    </form>
+                    
+                </a>
+            </div>
+                <a href="cheshangcheng.html#che"><img src="img/b.png" class="b"/></a>
+         </div>
+         
+             <!--车展-->
+        <div class="chezhan">
+                <h3>车展视频</h3>
+                <hr />
+            <div class="img1"><a name="cheshi" href="#"><img src="img/.1.png" /></a></div>
+            <div class="tu"><a href="#"><img src="img/.2.png" /></a></div>
+            <div class="tu"><a href="#"><img src="img/.3.png" /></a></div>
+            <div class="tu"><a href="#"><img src="img/.4.png" /></a></div>
+            <div class="tu"><a href="#"><img src="img/.5.png" /></a></div>
+            <div class="tu"><a href="#"><img src="img/.6.png" /></a></div>
+            <div class="tu"><a href="#"><img src="img/.7.png" /></a></div>
+            <div class="tu"><a href="#"><img src="img/.8.png" /></a></div>
+            <div class="tu"><a href="#"><img src="img/.9.png" /></a></div>
+        
+        </div>
+         
+      
+    </div> 
+     <!--版权底部框架-->
+        <div class="bottom">
+        <hr />
+        	<strong> 友情链接</strong>&nbsp;&nbsp;<a href="http://www.autohome.com.cn/">汽车之家</a>&nbsp;&nbsp;
+            <a href="http://beijing.bitauto.com/">易车</a>&nbsp;&nbsp;
+            <a href="http://www.renrenche.com/">人人车</a>&nbsp;&nbsp;<a href="http://www.xcar.com.cn/">爱卡汽车</a>
+            <a href="http://bj.58.com/ershouche/">北京二手车</a>&nbsp;&nbsp;<a href="http://www.yangche51.com/">车主之家</a>&nbsp;&nbsp;
+            <a href="http://www.autostreets.com/">汽车街</a>&nbsp;&nbsp;&nbsp;&nbsp;
+    		<strong>其他</strong>&nbsp;&nbsp;<a href="#">关于我们</a>&nbsp;&nbsp;<a href="#">联系方式</a>&nbsp;&nbsp; 
+            <a href="mailto:ShanKK_dwyl@163.com">投诉&反馈</a> &nbsp;&nbsp;<a href="#">帮助</a><br />
+            <p class="copy"> Copyright &copy;&nbsp;2015&nbsp;山卡卡ShanKK&nbsp;版权所有 </p>
+        </div>
+</body>
+</html>
